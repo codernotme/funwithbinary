@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Binary to Text Converter</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="button.css" type="text/css">
+</head>
+<body>
+    <h1>Fun with text and binary</h1>
+    
+    <div class="tabs">
+        <div class="tab" onclick="showInfo()">Info</div>
+        <div class="tab" onclick="showBinaryConversion()">Binary to Text</div>
+        <div class="tab" onclick="showTextConversion()">Text to Binary</div>
+    </div>
+
+    <div class="content" id="info">
+        <h2>Binary to Text Conversion</h2>
+        <p>This page provides information about binary to text conversion.</p>
+    </div>
+
+    <div class="content" id="binaryConversion">
+        <h2>Binary to Text Conversion</h2>
+        <p>Enter a binary string (separated by spaces) and click the button to convert it to text:</p>
+        <textarea id="binaryInput" rows="5" cols="50"></textarea><br>
+        <button class="button-57" onclick="convertBinaryToText()"><span class="text">Convert</span><span>Converting..</span></button>
+        <p>Converted Text:</p>
+        <div id="textOutput"></div>
+    </div>
+
+    <div class="content" id="textConversion">
+        <h2>Text to Binary Conversion</h2>
+        <p>Enter text and click the button to convert it to binary:</p>
+        <textarea id="textInput" rows="5" cols="50"></textarea><br>
+        <button class="button-57" onclick="convertTextToBinary()"><span class="text">Convert</span><span>Converting..</span></button>
+        <p>Converted Binary:</p>
+        <div id="binaryOutput"></div>
+        <span id="copyButton" class="copyB" onclick="copyToClipboard()"><i class="fas fa-copy"></i> Copy</span>
+        <div id="copyMessage" class='copyB' style="display: none;">Text Copied!</div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="button.js"></script>
+</body>
+</html>
